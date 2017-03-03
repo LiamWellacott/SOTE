@@ -6,7 +6,7 @@ import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
 @SuiteClasses({ EquationPanelTest.class, EquationsViewTest.class, EquationTest.class, FirstOrderEquationTest.class,
-		FractionEquationTest.class, SinusBasedEquationTest.class })
+		FractionEquationTest.class, SinusBasedEquationTest.class, SystemTests.class })
 public class AllTests {
 
 }
