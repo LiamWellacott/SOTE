@@ -31,18 +31,19 @@ public abstract class Equation {
 		Constructor c =  equationType.getConstructors()[0];
 		int n_arguments = c.getParameterTypes().length;
 		Object[] arguments = new Double [n_arguments];
-		for (int i=0; i<n_arguments;i++) {
-			//ask for values
-			String s = JOptionPane.showInputDialog(null, ((char)(((byte)'a')+i))+" =", 
-					"Enter argument", JOptionPane.QUESTION_MESSAGE);
-			arguments[i] = Double.parseDouble(s);
-		}
 		try {
+			for (int i=0; i<n_arguments;i++) {
+				//ask for values
+				String s = JOptionPane.showInputDialog(null, ((char)(((byte)'a')+i))+" =", 
+						"Enter argument", JOptionPane.QUESTION_MESSAGE);
+				arguments[i] = Double.parseDouble(s);
+			}
+		
 			// we return the new instance
 			return (Equation)c.newInstance(arguments);
 		} catch (Exception e) {
-			e.printStackTrace();
-			JOptionPane.showMessageDialog(null, "alert", "alert", JOptionPane.ERROR_MESSAGE);
+			//e.printStackTrace();
+			JOptionPane.showMessageDialog(null, "Information inputted incorrectly", "alert", JOptionPane.ERROR_MESSAGE);
 		}
 		// if there was no exception
 		return null;
