@@ -5,6 +5,7 @@ package uk.ac.york.modules.testing;
 
 import javax.swing.JApplet;
 import javax.swing.JFrame;
+import javax.swing.WindowConstants;
 
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
@@ -61,6 +62,7 @@ public class EquationsView extends JApplet {
 			EquationPanel p = new EquationPanel(e);
 			f.add(p);
 			f.setVisible(true);
+			f.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 		}
 	}
 	
