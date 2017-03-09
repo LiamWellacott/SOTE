@@ -52,7 +52,7 @@ public class EquationsView extends JApplet {
 			System.out.println("SecondOrder Equations not yet implemented");
 			//e = Equation.createEquationFromType(FractionEquation.class);
 		} else {
-			System.out.println("Options are: \n\tFirstOrder: f(x) = ax+b\n\tSecond Order: f(x) =ax^2+bx+c\n\tSinus: f(x) =a*(sin(b+x)^c)+d\n\tFraction: f(x) =a/(x+b)");
+			System.out.println("Options are: \n\tFirstOrder: f(x) = ax+b\n\tSecondOrder: f(x) =ax^2+bx+c\n\tSinus: f(x) =a*(sin(b+x)^c)+d\n\tFraction: f(x) =a/(x+b)");
 		}
 
 		if (e != null) {
@@ -62,19 +62,7 @@ public class EquationsView extends JApplet {
 			f.add(p);
 			f.setVisible(true);
 		}
-	}
-	
-	
-	
-	/**
-	 * A simple method for incrementing an integer value
-	 * 
-	 * @param i the value to increment.
-	 * @return the incremented value.
-	 */
-	public static int increment(int i) {
-		
-		return i+1;
+
 	}
 
 }
