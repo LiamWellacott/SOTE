@@ -36,6 +36,9 @@ public abstract class Equation {
 				//ask for values
 				String s = JOptionPane.showInputDialog(null, ((char)(((byte)'a')+i))+" =", 
 						"Enter argument", JOptionPane.QUESTION_MESSAGE);
+				if (s == null) {
+				  return null;
+				}
 				arguments[i] = Double.parseDouble(s);
 			}
 		
@@ -43,7 +46,7 @@ public abstract class Equation {
 			return (Equation)c.newInstance(arguments);
 		} catch (Exception e) {
 			//e.printStackTrace();
-			JOptionPane.showMessageDialog(null, "Information inputted incorrectly", "alert", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(null, "Information inputted incorrectly, Please only enter numbers", "alert", JOptionPane.ERROR_MESSAGE);
 		}
 		// if there was no exception
 		return null;

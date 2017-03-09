@@ -31,8 +31,16 @@ public class FractionEquation extends Equation {
 	}
 	@Override
 	public double of(double x) {
+		if (x+b == 0) {
+			if (a > 0) {
+				return Double.POSITIVE_INFINITY;
+			} else {
+				return Double.NEGATIVE_INFINITY;
+			}
+		}
 		return a/(x+b);
 	}
+	
 	@Override
 	public String toString() {
 		return a+"/(x+"+b+")";
