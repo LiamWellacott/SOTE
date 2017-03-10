@@ -43,10 +43,13 @@ public class SinusBasedEquation extends Equation {
 	}
 	@Override
 	public double of(double x) {
-		return a*Math.pow(Math.sin(b*x),c)+d;
+		
+	    double power = Math.pow(x,c);
+	    double sinValue = Math.sin(b * power);
+		return a*sinValue + d;
 	}
 	@Override
 	public String toString() {
-		return a+"(sin("+b+"x)^"+c+")+"+d;
+		return a+"sin("+b+"x^"+c+")+"+d;
 	}
 }

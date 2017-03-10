@@ -52,7 +52,7 @@ public class EquationsView extends JApplet {
 		} else if(args[0].equals("SecondOrder")) {
 			e = Equation.createEquationFromType(SecondOrderEquation.class);
 		} else {
-			System.out.println("Options are: \n\tFirstOrder: f(x) = ax+b\n\tSecondOrder: f(x) =ax^2+bx+c\n\tSinus: f(x) =a*(sin(b+x)^c)+d\n\tFraction: f(x) =a/(x+b)");
+			System.out.println("Options are: \n\tFirstOrder: f(x) = ax+b\n\tSecondOrder: f(x) =ax^2+bx+c\n\tSinus: f(x) =a*sin(bx^c)+d\n\tFraction: f(x) =a/(x+b)");
 		}
 
 		if (e != null) {
