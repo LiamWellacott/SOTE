@@ -37,7 +37,7 @@ public class EquationPanel extends JPanel {
 	/**
 	 * The list of points.
 	 */
-	public ArrayList<Double> []series = new ArrayList[2];
+	public ArrayList<Double>[] series = new ArrayList[2];
 
 	/**
 	 * The size of the border on the left part.
@@ -88,7 +88,7 @@ public class EquationPanel extends JPanel {
 	 */
 	public void populate(double max) {
 		double step = max/2000;
-		for (int i = 0; i<2000; i=i+1) {
+		for (int i =0; i<2000; i=i+1) {
 			this.addValue(i*step, equation.of(i*step));
 		}
 	}
@@ -170,9 +170,11 @@ public class EquationPanel extends JPanel {
 		}
 		// if the maximum y is too low, we extend it.
 		if (maxY<y) {
-			maxY=2*y;
-			nDigitsY=(int)Math.floor(Math.log10(maxY));
-			leftBorder = 20+nDigitsY*7;
+			if (y != Double.POSITIVE_INFINITY) {
+				maxY=2*y;
+				nDigitsY=(int)Math.floor(Math.log10(maxY));
+				leftBorder = 20+nDigitsY*7;
+			}
 		}
 		// we add the point to the graph
 		series[0].add(x);
